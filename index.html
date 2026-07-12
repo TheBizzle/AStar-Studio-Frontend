@@ -484,8 +484,7 @@ createApp({
           });
 
         if (result.ok) {
-          body = await result.text();
-          handleSuccess(body);
+          handleSuccess(await result.text());
         } else {
           apiError.value = await result.text();
         }
